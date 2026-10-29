@@ -85,7 +85,28 @@
       }).join('');
       main.innerHTML = `<section><h1>Your bag</h1>${rows ? `<ul>${rows}</ul><p><strong>Subtotal: ${money(total)}</strong></p><p>Checkout is not available yet.</p>` : '<p>Your bag is empty.</p>'}<a href="#shop/all">Continue shopping</a></section>`;
     } else if (route === 'account') {
-      main.innerHTML = '<h1>Account</h1><p>Account sign-in is not available yet.</p><a href="#shop/all">Continue shopping</a>';
+      main.innerHTML = `<section class="auth-section">
+        <div class="auth-container">
+          <div class="auth-content">
+            <p class="eyebrow">Welcome back</p>
+            <h1>Sign in</h1>
+            <p>Sign in to access your CAAVON account.</p>
+            <form id="login-form">
+              <div class="form-group">
+                <label for="login-email">Email address</label>
+                <input id="login-email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div class="form-group">
+                <label for="login-password">Password</label>
+                <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+              </div>
+              <button class="btn-primary" type="submit">Sign in</button>
+              <p id="login-message" class="form-hint" role="status" aria-live="polite"></p>
+            </form>
+            <a href="#shop/all">Continue shopping</a>
+          </div>
+        </div>
+      </section>`;
     } else {
       main.innerHTML = '<h1>Page not found</h1><a href="#shop/all">Back to shop</a>';
     }
