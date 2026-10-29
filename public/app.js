@@ -35,7 +35,9 @@
       <div class="hero-buttons"><a class="btn-primary" href="#shop/all">Shop All</a><a class="btn-secondary" href="#shop/kids">Shop Kids</a></div></div>
       <div class="hero-image"><img src="${escapeHtml(products[0]?.images?.[0])}" alt="CAAVON clothing"></div></section>
       <section class="products-section"><div class="section-header"><h2>Featured Products</h2><a href="#shop/all">View All</a></div>
-      ${grid(products.slice(0,8))}</section>`;
+      ${grid(products.slice(0,8))}</section>
+      <section class="products-section" id="kids-collection"><div class="section-header"><h2>Kids Collection</h2><a href="#shop/kids">Shop All Kids</a></div>
+      ${grid(products.filter(p => String(p.gender).toLowerCase() === "kids").slice(0,4))}</section>`;
   }
   function productPage(id) {
     const p = products.find(x => x.id === id);
