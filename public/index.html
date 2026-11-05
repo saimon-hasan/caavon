@@ -1,81 +1,197 @@
+
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#fafaf8" />
-    <meta
-      name="description"
-      content="CAAVON — Premium essentials for everyday style. Shop curated collections of minimalist fashion."
-    />
-    <title>CAAVON — Premium Fashion Essentials</title>
-    <link rel="stylesheet" href="/styles.css" />
-    <script src="/app.js"</script>
-  </head>
-  <body>
-    <a class="skip" href="#main">Skip to main content</a>
-    
-    <div class="announcement">
-      Free shipping on orders over $50 · Easy 30-day returns · Premium essentials
+<head>
+  <meta charset="utf-8" />
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1" />
+
+  <meta name="theme-color" content="#fafaf8" />
+
+  <meta
+    name="description"
+    content="CAAVON — Premium essentials for everyday style. Shop curated collections of minimalist fashion."
+  />
+
+  <title>CAAVON — Premium Fashion Essentials</title>
+
+  <!-- Existing website stylesheet -->
+  <link rel="stylesheet" href="./public/styles.css" />
+
+  <!-- Existing storefront application -->
+  <script src="./public/app.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Accessibility -->
+  <a class="skip" href="#main">
+    Skip to main content
+  </a>
+
+  <!-- Announcement -->
+  <div class="announcement">
+    Free shipping on orders over $50 ·
+    Easy 30-day returns ·
+    Premium essentials
+  </div>
+
+  <!-- Header -->
+  <header>
+
+    <a
+      class="brand"
+      href="#home"
+      aria-label="CAAVON home"
+    >
+      CAAVON
+    </a>
+
+    <!-- Main navigation -->
+    <nav aria-label="Primary navigation">
+
+      <a href="#shop/women">
+        Women
+      </a>
+
+      <a href="#shop/men">
+        Men
+      </a>
+
+      <!-- FIXED: Kids opens the Kids collection -->
+      <a href="#shop/kids">
+        Kids
+      </a>
+
+      <a href="#shop/all">
+        Shop all
+      </a>
+
+    </nav>
+
+    <!-- Account and shopping utilities -->
+    <div class="utilities">
+
+      <a
+        href="#shop/all"
+        aria-label="Browse products"
+        title="Browse products"
+      >
+        🔍
+      </a>
+
+      <a
+        href="#favorites"
+        aria-label="Favorites"
+      >
+        ♡
+        <small id="fav-count">0</small>
+      </a>
+
+      <a
+        href="#account"
+        id="account-link"
+      >
+        Account
+      </a>
+
+      <a
+        href="#bag"
+        aria-label="Shopping bag"
+      >
+        🛍
+        <small id="bag-count">0</small>
+      </a>
+
     </div>
 
-    <header>
-      <a class="brand" href="#home" aria-label="CAAVON home">CAAVON</a>
-      
-      <nav aria-label="Primary navigation">
-        <a href="#shop/women">Women</a>
-        <a href="#shop/men">Men</a>
-        <a href="#shop/kids">Kids</a>
-        <a href="#shop/all">Shop all</a>
-      </nav>
+  </header>
 
-      <div class="utilities">
-        <a href="#shop/all" aria-label="Search" title="Search">
-          🔍
-        </a>
-        <a href="#favorites" aria-label="Favorites">
-          ♡ <small id="fav-count">0</small>
-        </a>
-        <a href="#account" id="account-link">Account</a>
-        <a href="#bag" aria-label="Shopping bag">
-          🛍 <small id="bag-count">0</small>
-        </a>
-      </div>
-    </header>
+  <!--
+    The JavaScript application displays:
+    - Homepage
+    - Women collection
+    - Men collection
+    - Kids collection
+    - All products
+    - Product details
+    - Favorites
+    - Shopping bag
+  -->
+  <main id="main"></main>
 
-    <main id="main"></main>
+  <!-- Footer -->
+  <footer>
 
-    <footer>
-      <div>
-        <a class="brand" href="#home">CAAVON</a>
-        <p>Carefully curated essentials for your everyday style.</p>
-      </div>
-      <div>
-        <h3>Shop</h3>
-        <a href="#shop/women">Women</a>
-        <a href="#shop/men">Men</a>
-        <a href="#shop/kids">Kids</a>
-        <a href="#shop/all">All pieces</a>
-        <a href="#shop/all?sale=true">Sale</a>
-      </div>
-      <div>
-        <h3>Customer care</h3>
-        <a href="#home">Contact us</a>
-        <a href="#home">Shipping info</a>
-        <a href="#home">Returns</a>
-        <a href="#home">Size guide</a>
-      </div>
-      <div>
-        <h3>About</h3>
-        <a href="#home">Our story</a>
-        <a href="#home">Sustainability</a>
-        <a href="#home">Careers</a>
-        <a href="#home">Privacy policy</a>
-      </div>
-    </footer>
+    <div>
+      <a class="brand" href="#home">
+        CAAVON
+      </a>
 
-    <div id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+      <p>
+        Carefully curated essentials for your everyday style.
+      </p>
+    </div>
 
-    <dialog id="product-dialog" aria-label="Product details"></dialog>
-  </body>
+    <div>
+      <h3>Shop</h3>
+
+      <a href="#shop/women">
+        Women
+      </a>
+
+      <a href="#shop/men">
+        Men
+      </a>
+
+      <a href="#shop/kids">
+        Kids
+      </a>
+
+      <a href="#shop/all">
+        All pieces
+      </a>
+
+      <a href="#shop/all?sale=true">
+        Sale
+      </a>
+    </div>
+
+    <div>
+      <h3>Customer care</h3>
+
+      <a href="#home">Contact us</a>
+      <a href="#home">Shipping info</a>
+      <a href="#home">Returns</a>
+      <a href="#home">Size guide</a>
+    </div>
+
+    <div>
+      <h3>About</h3>
+
+      <a href="#home">Our story</a>
+      <a href="#home">Sustainability</a>
+      <a href="#home">Careers</a>
+      <a href="#home">Privacy policy</a>
+    </div>
+
+  </footer>
+
+  <!-- Notification messages -->
+  <div
+    id="toast"
+    role="status"
+    aria-live="polite"
+    aria-atomic="true"
+  ></div>
+
+  <!-- Product details dialog -->
+  <dialog
+    id="product-dialog"
+    aria-label="Product details"
+  ></dialog>
+
+</body>
 </html>
+
