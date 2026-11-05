@@ -89,7 +89,7 @@
         <div class="auth-container">
           <div class="auth-content">
             <p class="eyebrow">Welcome back</p>
-            <h1>Sign in</h1>
+            <h1>Si in</h1>
             <p>Sign in to access your CAAVON account.</p>
             <form id="login-form">
               <div class="form-group">
