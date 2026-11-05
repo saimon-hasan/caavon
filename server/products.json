@@ -1,0 +1,313 @@
+[
+  {
+    "id": "w1",
+    "name": "Essentials Linen Shirt",
+    "gender": "women",
+    "category": "Shirts",
+    "price": 49,
+    "originalPrice": 69,
+    "isNew": true,
+    "isSale": true,
+    "description": "A lightweight linen shirt perfect for layering or wearing on its own. Comfortable and breathable for year-round styling.",
+    "material": "100% pure linen",
+    "care": ["Machine wash cold", "Lay flat to dry", "Warm iron if needed"],
+    "colors": [
+      { "name": "Cloud white", "hex": "#f5f5f0" },
+      { "name": "Soft beige", "hex": "#e8dcc8" },
+      { "name": "Sage green", "hex": "#b8c5a6" }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1598554747436-c9293d6a588f?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1539533057440-7814baea1002?auto=format&fit=crop&w=900&q=85"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "relatedIds": ["w3", "w2"]
+  },
+  {
+    "id": "w2",
+    "name": "Premium Denim Jacket",
+    "gender": "women",
+    "category": "Outerwear",
+    "price": 99,
+    "originalPrice": 129,
+    "isNew": true,
+    "isSale": true,
+    "description": "A timeless denim jacket crafted from heritage denim. Perfect for layering over any outfit. Features reinforced stitching and metal hardware.",
+    "material": "100% organic cotton denim",
+    "care": ["Dry clean recommended", "Wash with similar colors", "Tumble dry low heat"],
+    "colors": [
+      { "name": "Dark indigo", "hex": "#1a3a52" },
+      { "name": "Light wash", "hex": "#5b7c99" },
+      { "name": "Vintage black", "hex": "#2a2a2a" }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1543076447-215ad9ba6923?auto=format&fit=crop&w=900&q=85"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "relatedIds": ["w5", "m4"]
+  },
+  {
+    "id": "w3",
+    "name": "Cashmere Blend Sweater",
+    "gender": "women",
+    "category": "Knitwear",
+    "price": 79,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "Luxury meets comfort in this cashmere-blend sweater. Soft, breathable, and incredibly versatile for everyday wear.",
+    "material": "70% cashmere, 30% wool",
+    "care": ["Hand wash cold water", "Dry flat away from heat", "Avoid direct sunlight"],
+    "colors": [
+      { "name": "Cream", "hex": "#fffef8" },
+      { "name": "Charcoal grey", "hex": "#3d3d3d" },
+      { "name": "Camel", "hex": "#c9a876" },
+      { "name": "Navy blue", "hex": "#1e3a4c" }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "relatedIds": ["w1", "m3"]
+  },
+  {
+    "id": "w4",
+    "name": "Wide-Leg Trousers",
+    "gender": "women",
+    "category": "Pants",
+    "price": 69,
+    "originalPrice": 89,
+    "isNew": false,
+    "isSale": true,
+    "description": "Tailored wide-leg trousers in a structured wool blend. A versatile staple for both professional and casual styling.",
+    "material": "68% wool, 32% polyester",
+    "care": ["Dry clean only", "Store on hanger", "Steam gently"],
+    "colors": [
+      { "name": "Charcoal", "hex": "#3f3f3f" },
+      { "name": "Tan", "hex": "#c9b8a8" },
+      { "name": "Black", "hex": "#1a1a1a" }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=900&q=85",
+      "https://images.unsplash.com/photo-1506629082847-11b52e52b1bb?auto=format&fit=crop&w=900&q=85"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "relatedIds": ["w1", "w7"]
+  },
+  {
+    "id": "w5",
+    "name": "Silk Camisole",
+    "gender": "women",
+    "category": "Tops",
+    "price": 39,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A delicate silk camisole perfect for layering or wearing alone. Elegant and effortless.",
+    "material": "100% pure silk",
+    "care": ["Hand wash in cool water", "Lay flat to dry", "Iron on low heat"],
+    "colors": [
+      { "name": "Ivory", "hex": "#fffff0" },
+      { "name": "Blush", "hex": "#ffe4e1" },
+      { "name": "Black", "hex": "#1a1a1a" },
+      { "name": "Champagne", "hex": "#f5f5dc" }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=85"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "relatedIds": ["w1", "w3"]
+  },
+  {
+    "id": "w6",
+    "name": "Minimalist White Tee",
+    "gender": "women",
+    "category": "T-shirts",
+    "price": 25,
+    "originalPrice": null,
+    "isNew": false,
+    "isSale": false,
+    "description": "The perfect basic white t-shirt. Crafted from premium cotton for a luxurious feel.",
+    "material": "100% organic cotton",
+    "care": ["Machine wash warm", "Tumble dry medium", "Remove promptly"],
+    "colors": [
+      { "name": "White", "hex": "#ffffff" },
+      { "name": "Off-white", "hex": "#f5f5f5" },
+      { "name": "Black", "hex": "#1a1a1a" },
+      { "name": "Grey", "hex": "#cccccc" }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "relatedIds": ["w1", "w5"]
+  },
+  {
+    "id": "w7",
+    "name": "Statement Blazer",
+    "gender": "women",
+    "category": "Outerwear",
+    "price": 129,
+    "originalPrice": 169,
+    "isNew": true,
+    "isSale": true,
+    "description": "A structured blazer that commands attention. Perfect for elevating any outfit with polished sophistication.",
+    "material": "100% virgin wool",
+    "care": ["Dry clean only", "Hang on padded hanger", "Professional steam"],
+    "colors": [
+      { "name": "Black", "hex": "#1a1a1a" },
+      { "name": "Camel", "hex": "#c9a876" },
+      { "name": "Navy", "hex": "#1e3a4c" }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1591078615531-430f63602d4b?auto=format&fit=crop&w=900&q=85"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "relatedIds": ["w4", "w2"]
+  },
+  {
+    "id": "m1",
+    "name": "Essential Cotton Tee",
+    "gender": "men",
+    "category": "T-shirts",
+    "price": 25,
+    "originalPrice": null,
+    "isNew": false,
+    "isSale": false,
+    "description": "A clean crew-neck staple made from premium organic cotton. Timeless and versatile.",
+    "material": "100% organic cotton",
+    "care": ["Machine wash warm", "Tumble dry medium", "Remove promptly to avoid wrinkles"],
+    "colors": [
+      { "name": "White", "hex": "#ffffff" },
+      { "name": "Black", "hex": "#1a1a1a" },
+      { "name": "Heather grey", "hex": "#9e9e9e" },
+      { "name": "Navy", "hex": "#1e3a4c" }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "relatedIds": ["m5", "m2"]
+  },
+  {
+    "id": "m2",
+    "name": "Classic Oxford Shirt",
+    "gender": "men",
+    "category": "Shirts",
+    "price": 65,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A crisp Oxford cloth button-down shirt. Dressy enough for work, relaxed enough for weekends.",
+    "material": "100% cotton Oxford cloth",
+    "care": ["Machine wash warm", "Tumble dry low", "Iron while slightly damp"],
+    "colors": [
+      { "name": "White", "hex": "#ffffff" },
+      { "name": "Light blue", "hex": "#d4e6f1" },
+      { "name": "Navy", "hex": "#1e3a4c" },
+      { "name": "Pale pink", "hex": "#fce4ec" }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=900&q=85"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "relatedIds": ["m1", "m3"]
+  },
+  {
+    "id": "m3",
+    "name": "Premium Hoodie",
+    "gender": "men",
+    "category": "Knitwear",
+    "price": 59,
+    "originalPrice": 79,
+    "isNew": true,
+    "isSale": true,
+    "description": "A cozy premium hoodie crafted from a soft cotton-blend. Perfect for layering or wearing alone.",
+    "material": "70% cotton, 30% polyester",
+    "care": ["Machine wash warm inside out", "Tumble dry low", "Avoid bleach"],
+    "colors": [
+      { "name": "Heather grey", "hex": "#9e9e9e" },
+      { "name": "Navy", "hex": "#1e3a4c" },
+      { "name": "Black", "hex": "#1a1a1a" },
+      { "name": "Charcoal", "hex": "#3f3f3f" }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=900&q=85"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "relatedIds": ["m1", "m6"]
+  },
+  {
+    "id": "m4",
+    "name": "Heritage Denim Jacket",
+    "gender": "men",
+    "category": "Outerwear",
+    "price": 89,
+    "originalPrice": 119,
+    "isNew": false,
+    "isSale": true,
+    "description": "A classic denim jacket made from heritage-weight denim. Built to last and improve with age.",
+    "material": "100% organic cotton denim",
+    "care": ["Dry clean recommended", "Invert before washing", "Wash separately"],
+    "colors": [
+      { "name": "Dark indigo", "hex": "#1a3a52" },
+      { "name": "Medium wash", "hex": "#5b7c99" },
+      { "name": "Light wash", "hex": "#8fa8bf" }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1543076447-215ad9ba6923?auto=format&fit=crop&w=900&q=85"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "relatedIds": ["m2", "m1"]
+  },
+  {
+    "id": "m5",
+    "name": "Wool Trousers",
+    "gender": "men",
+    "category": "Pants",
+    "price": 79,
+    "originalPrice": 99,
+    "isNew": true,
+    "isSale": true,
+    "description": "Tailored wool trousers with a slim fit. Perfect for a polished look that works from office to dinner.",
+    "material": "100% virgin wool",
+    "care": ["Dry clean only", "Hang on trouser hanger", "Professional steam"],
+    "colors": [
+      { "name": "Charcoal", "hex": "#3f3f3f" },
+      { "name": "Navy", "hex": "#1e3a4c" },
+      { "name": "Black", "hex": "#1a1a1a" },
+      { "name": "Grey", "hex": "#5a5a5a" }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1506629082847-11b52e52b1bb?auto=format&fit=crop&w=900&q=85"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "relatedIds": ["m2", "m4"]
+  },
+  {
+    "id": "m6",
+    "name": "Lightweight Sweater",
+    "gender": "men",
+    "category": "Knitwear",
+    "price": 49,
+    "originalPrice": null,
+    "isNew": false,
+    "isSale": false,
+    "description": "A versatile crew-neck sweater in a merino wool blend. Comfortable for all seasons.",
+    "material": "70% merino wool, 30% nylon",
+    "care": ["Hand wash in cool water", "Lay flat to dry", "Avoid direct heat"],
+    "colors": [
+      { "name": "Cream", "hex": "#fffef8" },
+      { "name": "Charcoal grey", "hex": "#3d3d3d" },
+      { "name": "Navy", "hex": "#1e3a4c" },
+      { "name": "Sage", "hex": "#b8c5a6" }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85"
+    ],
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "relatedIds": ["m3", "m2"]
+  }
+]
