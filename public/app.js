@@ -1,93 +1,165 @@
-// CAAVON storefront — runs in the browser; Express remains in server/app.js.
+/* Browser code: save as public/app.js, not server/app.js. */
 (() => {
+  'use strict';
   const main = document.getElementById('main');
+  if (!main) return;
   let products = [];
-  let bag = JSON.parse(localStorage.getItem('caavon-bag') || '[]');
-  let favorites = JSON.parse(localStorage.getItem('caavon-favorites') || '[]');
-  const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const money = n => '$' + Number(n).toFixed(2);
-  const save = () => {
-    localStorage.setItem('caavon-bag', JSON.stringify(bag));
-    localStorage.setItem('caavon-favorites', JSON.stringify(favorites));
-    document.getElementById('bag-count').textContent = bag.reduce((n, item) => n + item.quantity, 0);
-    document.getElementById('fav-count').textContent = favorites.length;
+  const read = (key, fallback) => {
+    try { return JSON.parse(localStorage.getItem(key)) ?? fallback; }
+    catch { return fallback; }
   };
-  const card = p => `<article class="product-card"><div class="product-image">
-    <a href="#product/${encodeURIComponent(p.id)}"><img src="${escapeHtml(p.images?.[0])}" alt="${escapeHtml(p.name)}" loading="lazy"></a>
-    ${p.isSale ? '<span class="badge">Sale</span>' : p.isNew ? '<span class="badge">New</span>' : ''}
-    <button class="heart" data-favorite="${escapeHtml(p.id)}" aria-label="Toggle favorite">${favorites.includes(p.id) ? '♥' : '♡'}</button></div>
-    <div class="product-info"><h3><a href="#product/${encodeURIComponent(p.id)}">${escapeHtml(p.name)}</a></h3>
-    <div class="product-price">${money(p.price)} ${p.originalPrice ? `<del>${money(p.originalPrice)}</del>` : ''}</div>
-    <p>${escapeHtml(p.category)}</p></div></article>`;
-  const grid = items => items.length ? `<div class="products-grid">${items.map(card).join('')}</div>` : '<p>No products found.</p>';
-  function collection(category, sale = false) {
-    const names = {women:'Women', men:'Men', kids:'Kids', all:'Shop All'};
-    const name = names[category] || names.all;
-    const items = products.filter(p => (category === 'all' || p.gender === category) && (!sale || p.isSale));
-    main.innerHTML = `<section class="shop-header"><h1>${sale ? 'Sale · ' : ''}${name}</h1><p>Carefully curated essentials for everyday style.</p></section>
-      <section class="products-section"><div class="section-header"><h2>${name} Collection</h2><p>${items.length} products</p></div>
-      <div class="filter-tabs">${Object.entries(names).map(([key,label]) => `<a class="filter-tab" href="#shop/${key}">${label}</a>`).join('')}</div>
-      ${grid(items)}</section>`;
+  const savedFavorites = read('caavon-favorites', []);
+  const favorites = new Set(Array.isArray(savedFavorites) ? savedFavorites : []);
+  const savedBag = read('caavon-bag', []);
+  let bag = Array.isArray(savedBag) ? savedBag.filter(item => item && typeof item.id === 'string' && Number.isInteger(item.quantity) && item.quantity > 0) : [];
+  const money = value => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
+  const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+  const imageUrl = value => {
+    try {
+      const url = new URL(value, location.href);
+      return ['http:', 'https:'].includes(url.protocol) ? escape(url.href) : '';
+    } catch { return ''; }
+  };
+  function persist() {
+    try {
+      localStorage.setItem('caavon-favorites', JSON.stringify([...favorites]));
+      localStorage.setItem('caavon-bag', JSON.stringify(bag));
+    } catch { /* Shopping still works when browser storage is unavailable. */ }
+    updateCounts();
   }
-  function home() {
-    main.innerHTML = `<section class="hero-section"><div class="hero-content"><span class="eyebrow">A STUDY IN SIMPLICITY</span>
-      <h1>Premium Fashion Essentials</h1><p>Timeless clothing for women, men, and kids.</p>
-      <div class="hero-buttons"><a class="btn-primary" href="#shop/all">Shop All</a><a class="btn-secondary" href="#shop/kids">Shop Kids</a></div></div>
-      <div class="hero-image"><img src="${escapeHtml(products[0]?.images?.[0])}" alt="CAAVON clothing"></div></section>
-      <section class="products-section"><div class="section-header"><h2>Featured Products</h2><a href="#shop/all">View All</a></div>
-      ${grid(products.slice(0,8))}</section>
-      <section class="products-section" id="kids-collection"><div class="section-header"><h2>Kids Collection</h2><a href="#shop/kids">Shop All Kids</a></div>
-      ${grid(products.filter(p => String(p.gender).toLowerCase() === "kids").slice(0,4))}</section>`;
+  function updateCounts() {
+    const favoriteCount = document.getElementById('fav-count');
+    const bagCount = document.getElementById('bag-count');
+    if (favoriteCount) favoriteCount.textContent = favorites.size;
+    if (bagCount) bagCount.textContent = bag.reduce((sum, item) => sum + item.quantity, 0);
   }
-  function productPage(id) {
-    const p = products.find(x => x.id === id);
-    if (!p) { main.innerHTML = '<section class="products-section"><h1>Product not found</h1></section>'; return; }
-    main.innerHTML = `<section class="products-section"><a href="#shop/${escapeHtml(p.gender)}">← Back to ${escapeHtml(p.gender)}</a>
-      <div class="hero-section"><div class="hero-image"><img src="${escapeHtml(p.images?.[0])}" alt="${escapeHtml(p.name)}"></div>
-      <div class="hero-content"><h1>${escapeHtml(p.name)}</h1><p class="product-price">${money(p.price)}</p>
-      <p>${escapeHtml(p.description)}</p><p>Material: ${escapeHtml(p.material)}</p>
-      <label for="product-size">Size</label> <select id="product-size">${p.sizes.map(s => `<option>${escapeHtml(s)}</option>`).join('')}</select>
-      <p><button class="btn-primary" data-add="${escapeHtml(p.id)}">Add to Bag</button></p></div></div></section>`;
+  function announce(message) {
+    const toast = document.getElementById('toast');
+    if (toast) toast.textContent = message;
   }
-  function bagPage() {
-    const items = bag.map(item => ({...item, product:products.find(p => p.id === item.id)})).filter(item => item.product);
-    main.innerHTML = `<section class="products-section"><h1>Shopping Bag</h1>
-      ${items.length ? items.map(item => `<p>${escapeHtml(item.product.name)} · ${escapeHtml(item.size)} · Qty ${item.quantity} · ${money(item.product.price * item.quantity)}
-      <button data-remove="${escapeHtml(item.id)}" data-size="${escapeHtml(item.size)}">Remove</button></p>`).join('') +
-      `<h2>Subtotal: ${money(items.reduce((sum,item) => sum + item.product.price * item.quantity,0))}</h2><p>Checkout is not yet configured.</p>`
-      : '<p>Your shopping bag is empty.</p>'}</section>`;
+  function card(product) {
+    const id = escape(product.id);
+    return `<article class="product-card">
+      <a href="#product/${encodeURIComponent(product.id)}"><img src="${imageUrl(product.images[0])}" alt="${escape(product.name)}" loading="lazy" width="300" height="360" style="max-width:100%;object-fit:cover"></a>
+      <h3><a href="#product/${encodeURIComponent(product.id)}">${escape(product.name)}</a></h3>
+      <p>${money(product.price)} ${product.isSale && product.originalPrice > product.price ? `<del>${money(product.originalPrice)}</del>` : ''}</p>
+      <button type="button" data-action="favorite" data-id="${id}" aria-pressed="${favorites.has(product.id)}">${favorites.has(product.id) ? '♥ Saved' : '♡ Save'}</button>
+      <a href="#product/${encodeURIComponent(product.id)}">Choose options</a>
+    </article>`;
+  }
+  function collection(title, items) {
+    main.innerHTML = `<section><h1>${escape(title)}</h1><div class="product-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px">${items.length ? items.map(card).join('') : '<p>No products here yet.</p>'}</div></section>`;
   }
   function render() {
-    const hash = decodeURIComponent(location.hash.slice(1) || 'home');
-    if (hash.startsWith('shop/')) {
-      const [category, query] = hash.slice(5).split('?');
-      collection(['women','men','kids','all'].includes(category) ? category : 'all', new URLSearchParams(query).get('sale') === 'true');
-    } else if (hash.startsWith('product/')) productPage(hash.slice(8));
-    else if (hash === 'favorites') main.innerHTML = `<section class="products-section"><h1>Favorites</h1>${grid(products.filter(p => favorites.includes(p.id)))}</section>`;
-    else if (hash === 'bag') bagPage();
-    else if (hash === 'account') main.innerHTML = '<section class="products-section"><h1>Account</h1><p>Account login is not configured yet.</p></section>';
-    else home();
-    save();
-  }
-  document.addEventListener('click', event => {
-    const fav = event.target.closest('[data-favorite]');
-    if (fav) { const id = fav.dataset.favorite; favorites = favorites.includes(id) ? favorites.filter(x => x !== id) : [...favorites,id]; render(); }
-    const add = event.target.closest('[data-add]');
-    if (add) {
-      const id = add.dataset.add, size = document.getElementById('product-size').value;
-      const item = bag.find(x => x.id === id && x.size === size);
-      if (item) item.quantity++; else bag.push({id,size,quantity:1});
-      save(); document.getElementById('toast').textContent = 'Added to bag';
+    const [route, query = ''] = (location.hash.slice(1) || 'home').split('?');
+    if (route === 'main') return;
+    if (route === 'home' || route.startsWith('shop/')) {
+      const gender = route.split('/')[1] || 'all';
+      const saleOnly = new URLSearchParams(query).get('sale') === 'true';
+      collection(saleOnly ? 'Sale' : gender === 'women' ? 'Women' : gender === 'men' ? 'Men' : 'Shop all', products.filter(p => (gender === 'all' || p.gender === gender) && (!saleOnly || p.isSale)));
+    } else if (route === 'favorites') {
+      collection('Your favorites', products.filter(p => favorites.has(p.id)));
+    } else if (route.startsWith('product/')) {
+      let id;
+      try { id = decodeURIComponent(route.slice(8)); } catch { id = ''; }
+      const product = products.find(p => p.id === id);
+      if (!product) { main.innerHTML = '<h1>Product not found</h1><a href="#shop/all">Back to shop</a>'; return; }
+      main.innerHTML = `<section class="product-details">
+        <a href="#shop/all">Back to shop</a><h1>${escape(product.name)}</h1>
+        <img src="${imageUrl(product.images[0])}" alt="${escape(product.name)}" width="400" style="max-width:100%">
+        <p>${escape(product.description)}</p><p>${money(product.price)}</p><p>${escape(product.material)}</p>
+        <form id="add-to-bag" data-id="${escape(product.id)}">
+          <label>Size <select name="size" required>${product.sizes.map(size => `<option value="${escape(size)}">${escape(size)}</option>`).join('')}</select></label>
+          <label>Color <select name="color" required>${product.colors.map(color => `<option value="${escape(color.name)}">${escape(color.name)}</option>`).join('')}</select></label>
+          <button type="submit">Add to bag</button>
+        </form>
+        <h2>Care</h2><ul>${product.care.map(line => `<li>${escape(line)}</li>`).join('')}</ul>
+      </section>`;
+    } else if (route === 'bag') {
+      let total = 0;
+      const rows = bag.map((item, index) => {
+        const product = products.find(p => p.id === item.id);
+        if (!product) return '';
+        total += product.price * item.quantity;
+        return `<li><h2>${escape(product.name)}</h2><p>${escape(item.size)} / ${escape(item.color)} · Quantity: ${item.quantity} · ${money(product.price * item.quantity)}</p><button type="button" data-action="remove" data-index="${index}">Remove</button></li>`;
+      }).join('');
+      main.innerHTML = `<section><h1>Your bag</h1>${rows ? `<ul>${rows}</ul><p><strong>Subtotal: ${money(total)}</strong></p><p>Checkout is not available yet.</p>` : '<p>Your bag is empty.</p>'}<a href="#shop/all">Continue shopping</a></section>`;
+    } else if (route === 'account') {
+      main.innerHTML = `<section class="auth-section">
+        <div class="auth-container">
+          <div class="auth-content">
+            <p class="eyebrow">Welcome back</p>
+            <h1>Si in</h1>
+            <p>Sign in to access your CAAVON account.</p>
+            <form id="login-form">
+              <div class="form-group">
+                <label for="login-email">Email address</label>
+                <input id="login-email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div class="form-group">
+                <label for="login-password">Password</label>
+                <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+              </div>
+              <button class="btn-primary" type="submit">Sign in</button>
+              <p id="login-message" class="form-hint" role="status" aria-live="polite"></p>
+            </form>
+            <a href="#shop/all">Continue shopping</a>
+          </div>
+        </div>
+      </section>`;
+    } else {
+      main.innerHTML = '<h1>Page not found</h1><a href="#shop/all">Back to shop</a>';
     }
-    const remove = event.target.closest('[data-remove]');
-    if (remove) { bag = bag.filter(x => x.id !== remove.dataset.remove || x.size !== remove.dataset.size); render(); }
+  }
+  main.addEventListener('click', event => {
+    const button = event.target.closest('button[data-action]');
+    if (!button) return;
+    if (button.dataset.action === 'favorite') {
+      const id = button.dataset.id;
+      if (favorites.has(id)) favorites.delete(id); else favorites.add(id);
+    } else if (button.dataset.action === 'remove') {
+      bag.splice(Number(button.dataset.index), 1);
+    }
+    persist();
+    render();
   });
-  window.addEventListener('hashchange', render);
-  fetch(new URL('products.json', document.currentScript.src)).then(r => {
-    if (!r.ok) throw new Error('Products HTTP ' + r.status);
-    return r.json();
-  }).then(data => { products = data; render(); }).catch(error => {
-    console.error(error);
-    main.innerHTML = '<section class="products-section"><h1>Unable to load products</h1></section>';
+  main.addEventListener('submit', event => {
+    if (event.target.id !== 'add-to-bag') return;
+    event.preventDefault();
+    const form = event.target;
+    const values = new FormData(form);
+    const item = { id: form.dataset.id, size: values.get('size'), color: values.get('color'), quantity: 1 };
+    const existing = bag.find(row => row.id === item.id && row.size === item.size && row.color === item.color);
+    if (existing) existing.quantity += 1; else bag.push(item);
+    persist();
+    announce('Added to your bag.');
   });
+  async function init() {
+    main.innerHTML = '<p role="status">Loading products…</p>';
+    try {
+      const response = await fetch('/products.json');
+      if (!response.ok) throw new Error(`products.json returned HTTP ${response.status}`);
+      const data = await response.json();
+      if (!Array.isArray(data)) throw new Error('products.json must contain an array of products.');
+      const ids = new Set();
+      for (const product of data) {
+        if (!product || typeof product.id !== 'string' || ids.has(product.id) || typeof product.name !== 'string' || typeof product.price !== 'number' || !Number.isFinite(product.price) || product.price < 0 || !Array.isArray(product.images) || !product.images.length || !Array.isArray(product.sizes) || !Array.isArray(product.colors) || !Array.isArray(product.care)) {
+          throw new Error('A product has missing or invalid fields.');
+        }
+        ids.add(product.id);
+      }
+      products = data;
+      bag = bag.filter(item => ids.has(item.id));
+      for (const id of favorites) if (!ids.has(id)) favorites.delete(id);
+      persist();
+      window.addEventListener('hashchange', render);
+      if (location.hash === '#main') collection('Shop all', products); else render();
+    } catch (error) {
+      console.error('Product loading failed:', error);
+      main.innerHTML = `<h1>Unable to load products</h1><p>${escape(error.message)}</p><p>Check that products.json is inside your public folder and open the site through your server.</p><button type="button" id="retry-products">Try again</button>`;
+      document.getElementById('retry-products').addEventListener('click', init);
+    }
+  }
+  updateCounts();
+  init();
 })();

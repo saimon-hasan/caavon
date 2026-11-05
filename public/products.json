@@ -1,5 +1,1128 @@
 [
   {
+    "id": "w8",
+    "name": "Monogram Print Matching Set",
+    "gender": "men",
+    "category": "Shirts",
+    "price": 179,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A stylish, statement monogram-patterned matching jacket and pants set for a bold everyday look.",
+    "material": "100% cotton",
+    "care": [
+      "Machine wash cold",
+      "Hang to dry"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#000000"
+      }
+    ],
+    "images": [
+      "./images/w8.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w1",
+      "w2"
+    ]
+  },
+  {
+    "id": "w9",
+    "name": "Graphic Black Hoodie",
+    "gender": "unisex",
+    "category": "Hoodies",
+    "price": 65,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A comfortable black graphic hoodie featuring bold white text details for a streetwear look.",
+    "material": "80% cotton, 20% polyester",
+    "care": [
+      "Machine wash cold",
+      "Tumble dry low"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#000000"
+      }
+    ],
+    "images": [
+      "./images/w9.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w1",
+      "w8"
+    ]
+  },
+  {
+    "id": "w12",
+    "name": "Tailored Cream Suit Jacket",
+    "gender": "women",
+    "category": "Blazers",
+    "price": 95,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A sophisticated structured cream suit jacket with a clean profile, perfect for an elegant layered look.",
+    "material": "70% polyester, 30% rayon",
+    "care": [
+      "Dry clean only"
+    ],
+    "colors": [
+      {
+        "name": "Cream",
+        "hex": "#F5F5DC"
+      }
+    ],
+    "images": [
+      "./images/w12.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w11"
+    ]
+  },
+  {
+    "id": "w13",
+    "name": "Light Blue Trench Coat",
+    "gender": "women",
+    "category": "Outerwear",
+    "price": 110,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A chic, structured light blue trench coat designed to elevate any outerwear collection with a modern statement look.",
+    "material": "60% wool, 40% polyester",
+    "care": [
+      "Dry clean only"
+    ],
+    "colors": [
+      {
+        "name": "Light Blue",
+        "hex": "#ADD8E6"
+      }
+    ],
+    "images": [
+      "./images/w13.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w11",
+      "w12"
+    ]
+  },
+  {
+    "id": "w14",
+    "name": "Classic Wide-Brim Fedora",
+    "gender": "unisex",
+    "category": "Accessories",
+    "price": 55,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A sophisticated black wide-brim hat designed to add an element of timeless mystery and classic style to any outfit.",
+    "material": "100% wool felt",
+    "care": [
+      "Spot clean with a damp cloth",
+      "Store flat"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#000000"
+      }
+    ],
+    "images": [
+      "./images/w14.jpg"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "relatedIds": [
+      "w13",
+      "w11"
+    ]
+  },
+  {
+    "id": "w15",
+    "name": "Structured Black Blazer",
+    "gender": "women",
+    "category": "Blazers",
+    "price": 95,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A sophisticated structured black blazer featuring a bold silhouette and sharp tailoring for an elevated statement look.",
+    "material": "70% polyester, 30% rayon",
+    "care": [
+      "Dry clean only"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#000000"
+      }
+    ],
+    "images": [
+      "./images/w15.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w11",
+      "w14"
+    ]
+  },
+  {
+    "id": "w16",
+    "name": "Casual Fleece Jogger Set",
+    "gender": "unisex",
+    "category": "Sets",
+    "price": 80,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A comfortable and stylish fleece pullover and jogger set designed for relaxed everyday streetwear.",
+    "material": "80% cotton, 20% polyester fleece",
+    "care": [
+      "Machine wash cold",
+      "Tumble dry low"
+    ],
+    "colors": [
+      {
+        "name": "Dark Grey",
+        "hex": "#36454F"
+      }
+    ],
+    "images": [
+      "./images/w16.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w9",
+      "w15"
+    ]
+  },
+  {
+    "id": "w17",
+    "name": "Ruffled Accent Black Coat",
+    "gender": "women",
+    "category": "Outerwear",
+    "price": 135,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "An exquisite black long coat featuring eye-catching ruffled detailing and classic button closures for a sophisticated statement look.",
+    "material": "65% wool, 35% polyester",
+    "care": [
+      "Dry clean only"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#000000"
+      }
+    ],
+    "images": [
+      "./images/w17.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w13",
+      "w14"
+    ]
+  },
+  {
+    "id": "w18",
+    "name": "Oversized Cream Puffer Jacket",
+    "gender": "women",
+    "category": "Outerwear",
+    "price": 115,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A cozy, oversized cream puffer jacket featuring a high collar and insulated quilting for ultimate warmth and style.",
+    "material": "100% polyester shell and fill",
+    "care": [
+      "Machine wash gentle cold",
+      "Tumble dry low with dryer balls"
+    ],
+    "colors": [
+      {
+        "name": "Cream",
+        "hex": "#F5F5DC"
+      }
+    ],
+    "images": [
+      "./images/w18.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w13",
+      "w17"
+    ]
+  },
+  {
+    "id": "w19",
+    "name": "Oversized White Double-Breasted Blazer",
+    "gender": "women",
+    "category": "Blazers",
+    "price": 105,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A chic, oversized white double-breasted blazer designed for a bold and sophisticated statement look.",
+    "material": "70% polyester, 30% rayon",
+    "care": [
+      "Dry clean only"
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "images": [
+      "./images/w19.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w11",
+      "w15"
+    ]
+  },
+  {
+    "id": "w20",
+    "name": "Classic Black Long-Sleeve Top",
+    "gender": "women",
+    "category": "Tops",
+    "price": 40,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A sleek and versatile black long-sleeve top designed for effortless layering and everyday elegance.",
+    "material": "95% cotton, 5% spandex",
+    "care": [
+      "Machine wash cold",
+      "Hang to dry"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#000000"
+      }
+    ],
+    "images": [
+      "./images/w20.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w14",
+      "w17"
+    ]
+  },
+  {
+    "id": "w22",
+    "name": "Teal Halter Jumpsuit",
+    "gender": "women",
+    "category": "Jumpsuits",
+    "price": 98,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A stunning teal halter-style jumpsuit featuring a plunging V-neckline with satin lapels and a structured waistband for a show-stopping look.",
+    "material": "95% polyester, 5% spandex",
+    "care": [
+      "Hand wash cold",
+      "Line dry"
+    ],
+    "colors": [
+      {
+        "name": "Teal",
+        "hex": "#008080"
+      }
+    ],
+    "images": [
+      "./images/w22.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w19"
+    ]
+  },
+  {
+    "id": "w23",
+    "name": "Classic V-Neck Black Top",
+    "gender": "women",
+    "category": "Tops",
+    "price": 48,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A sophisticated black V-neck top designed for an effortlessly chic and timeless silhouette.",
+    "material": "95% cotton, 5% spandex",
+    "care": [
+      "Machine wash cold",
+      "Hang to dry"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#000000"
+      }
+    ],
+    "images": [
+      "./images/w23.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w15",
+      "w20"
+    ]
+  },
+  {
+    "id": "w24",
+    "name": "Statement Tulle Dress Set",
+    "gender": "women",
+    "category": "Dresses",
+    "price": 150,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "An avant-garde statement dress featuring a patterned long-sleeve bodice, sparkling accents, and a voluminous layered tulle skirt.",
+    "material": "100% polyester tulle and sequins",
+    "care": [
+      "Dry clean only"
+    ],
+    "colors": [
+      {
+        "name": "Black and White",
+        "hex": "#000000"
+      }
+    ],
+    "images": [
+      "./images/w24.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w17",
+      "w22"
+    ]
+  },
+  {
+    "id": "w25",
+    "name": "Classic White Shirt & Pants Set",
+    "gender": "women",
+    "category": "Sets",
+    "price": 85,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A crisp, comfortable matching white button-down shirt and pant set designed for effortless everyday wear.",
+    "material": "100% cotton",
+    "care": [
+      "Machine wash cold",
+      "Tumble dry low"
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "images": [
+      "./images/w25.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w8"
+    ]
+  },
+  {
+    "id": "w26",
+    "name": "Tailored Black Suit Jacket",
+    "gender": "women",
+    "category": "Blazers",
+    "price": 98,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A sleek and sophisticated tailored black blazer designed with a structured silhouette for an effortless, polished look.",
+    "material": "70% polyester, 30% wool",
+    "care": [
+      "Dry clean only"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#000000"
+      }
+    ],
+    "images": [
+      "./images/w26.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w15",
+      "w20"
+    ]
+  },
+  {
+    "id": "w27",
+    "name": "Lace-Up Faux Leather Pants",
+    "gender": "women",
+    "category": "Pants",
+    "price": 88,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "Edgy black faux leather pants featuring striking lace-up cutout details along the legs for a bold streetwear look.",
+    "material": "50% polyurethane, 50% polyester",
+    "care": [
+      "Hand wash cold",
+      "Line dry"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#000000"
+      }
+    ],
+    "images": [
+      "./images/w27.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w9",
+      "w20"
+    ]
+  },
+  {
+    "id": "w28",
+    "name": "Vibrant Floral Blouse & Orange Pants Set",
+    "gender": "women",
+    "category": "Sets",
+    "price": 92,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A chic, colorful outfit featuring a patterned floral long-sleeve blouse paired with striking high-waisted orange wide-leg trousers.",
+    "material": "100% polyester blend",
+    "care": [
+      "Machine wash cold",
+      "Line dry"
+    ],
+    "colors": [
+      {
+        "name": "Multicolor Floral & Orange",
+        "hex": "#FF4500"
+      }
+    ],
+    "images": [
+      "./images/w28.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w22"
+    ]
+  },
+  {
+    "id": "w29",
+    "name": "Satin Slip Dress with Sleeves",
+    "gender": "women",
+    "category": "Dresses",
+    "price": 125,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "An elegant satin slip dress featuring delicate straps, matching detached sheer sleeves, and a chic neck tie accent for a high-fashion runway look.",
+    "material": "100% polyester satin",
+    "care": [
+      "Dry clean only"
+    ],
+    "colors": [
+      {
+        "name": "Sage Green",
+        "hex": "#9DC183"
+      }
+    ],
+    "images": [
+      "./images/w29.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w24",
+      "w22"
+    ]
+  },
+  {
+    "id": "w30",
+    "name": "Faux Leather Trench Coat",
+    "gender": "women",
+    "category": "Outerwear",
+    "price": 140,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A stylish, long faux-leather trench coat featuring a structured lapel and a self-tie belt for an edgy, sophisticated look.",
+    "material": "55% polyurethane, 45% polyester",
+    "care": [
+      "Spot clean only",
+      "Hang to dry"
+    ],
+    "colors": [
+      {
+        "name": "Dark Charcoal / Black",
+        "hex": "#2F4F4F"
+      }
+    ],
+    "images": [
+      "/images/w44.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w13",
+      "w17"
+    ]
+  },
+  {
+    "id": "w31",
+    "name": "Red Graphic Logo T-Shirt",
+    "gender": "women",
+    "category": "Shirts",
+    "price": 38,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A bold red short-sleeve t-shirt featuring striking graphic lettering across the front for a casual streetwear vibe.",
+    "material": "100% cotton",
+    "care": [
+      "Machine wash cold with like colors",
+      "Tumble dry low"
+    ],
+    "colors": [
+      {
+        "name": "Red",
+        "hex": "#FF0000"
+      }
+    ],
+    "images": [
+      "./images/w31.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w8",
+      "w9"
+    ]
+  },
+  {
+    "id": "w32",
+    "name": "Burgundy Floral Tulle Gown",
+    "gender": "women",
+    "category": "Dresses",
+    "price": 180,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "An exquisite strapless burgundy gown featuring sheer dotted mesh, a dramatic flowing train, and delicate 3D floral appliqués.",
+    "material": "100% polyester mesh and tulle",
+    "care": [
+      "Dry clean only"
+    ],
+    "colors": [
+      {
+        "name": "Burgundy",
+        "hex": "#800020"
+      }
+    ],
+    "images": [
+      "./images/w32.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w24",
+      "w29"
+    ]
+  },
+  {
+    "id": "w33",
+    "name": "White Tailored Suit Set",
+    "gender": "women",
+    "category": "Sets",
+    "price": 130,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A sophisticated white tailored suit set featuring a structured blazer and matching trousers for an immaculate, high-fashion statement look.",
+    "material": "70% polyester, 30% rayon",
+    "care": [
+      "Dry clean only"
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "images": [
+      "./images/w33.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w19"
+    ]
+  },
+  {
+    "id": "w34",
+    "name": "Oversized Black Coat",
+    "gender": "women",
+    "category": "Outerwear",
+    "price": 125,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A striking oversized black coat with wide sleeves and a bold, dramatic silhouette designed for statement layering.",
+    "material": "70% wool, 30% polyester",
+    "care": [
+      "Dry clean only"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#000000"
+      }
+    ],
+    "images": [
+      "./images/w34.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w14",
+      "w17"
+    ]
+  },
+  {
+    "id": "w35",
+    "name": "Light Grey Tailored Pant Suit Set",
+    "gender": "women",
+    "category": "Sets",
+    "price": 115,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A sophisticated matching light grey pant suit set featuring wide-leg trousers and a tailored blazer jacket for an effortless, modern professional look.",
+    "material": "70% polyester, 30% rayon",
+    "care": [
+      "Dry clean only"
+    ],
+    "colors": [
+      {
+        "name": "Light Grey",
+        "hex": "#D3D3D3"
+      }
+    ],
+    "images": [
+      "./images/w35.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w11",
+      "w33"
+    ]
+  },
+  {
+    "id": "w36",
+    "name": "Beige Ribbed Turtleneck Sweater",
+    "gender": "women",
+    "category": "Sweaters",
+    "price": 65,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A cozy beige ribbed turtleneck sweater designed for effortless layering and warm everyday comfort.",
+    "material": "70% acrylic, 30% wool",
+    "care": [
+      "Machine wash cold on gentle",
+      "Lay flat to dry"
+    ],
+    "colors": [
+      {
+        "name": "Beige",
+        "hex": "#F5F5DC"
+      }
+    ],
+    "images": [
+      "./images/w36.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w13",
+      "w18"
+    ]
+  },
+  {
+    "id": "w37",
+    "name": "Hammered Gold Geometric Earrings",
+    "gender": "women",
+    "category": "Accessories",
+    "price": 28,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "Elegant gold drop earrings featuring a combination of smooth and hammered semi-circular geometric plates for a sophisticated statement accessory.",
+    "material": "14k gold-plated brass",
+    "care": [
+      "Avoid contact with water and lotions",
+      "Store in a dry pouch"
+    ],
+    "colors": [
+      {
+        "name": "Gold",
+        "hex": "#FFD700"
+      }
+    ],
+    "images": [
+      "./images/w37.jpg"
+    ],
+    "sizes": [
+      "One Size"
+    ],
+    "relatedIds": [
+      "w20",
+      "w23"
+    ]
+  },
+  {
+    "id": "w38",
+    "name": "Classic Tan Leather Strap Watch",
+    "gender": "women",
+    "category": "Accessories",
+    "price": 85,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "An elegant, minimalist wristwatch featuring a clean white dial, a polished gold-tone case, and a genuine tan leather strap.",
+    "material": "Genuine leather strap, stainless steel case",
+    "care": [
+      "Avoid water immersion",
+      "Wipe clean with a soft cloth"
+    ],
+    "colors": [
+      {
+        "name": "Tan / Gold",
+        "hex": "#D2B48C"
+      }
+    ],
+    "images": [
+      "./images/w38.jpg"
+    ],
+    "sizes": [
+      "One Size"
+    ],
+    "relatedIds": [
+      "w37",
+      "w36"
+    ]
+  },
+  {
+    "id": "w39",
+    "name": "Oversized Textured Khaki Shirt",
+    "gender": "women",
+    "category": "Shirts",
+    "price": 68,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "An oversized, textured khaki button-down shirt featuring a relaxed collar, dropped shoulders, and raw-edge details for a modern, casual look.",
+    "material": "100% cotton textured weave",
+    "care": [
+      "Machine wash cold",
+      "Tumble dry low"
+    ],
+    "colors": [
+      {
+        "name": "Khaki",
+        "hex": "#C3B091"
+      }
+    ],
+    "images": [
+      "./images/w39.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w36",
+      "w38"
+    ]
+  },
+  {
+    "id": "w40",
+    "name": "Yellow Cropped Hoodie & Jogger Set",
+    "gender": "women",
+    "category": "Sets",
+    "price": 82,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A bold and cozy matching yellow loungewear set featuring a raw-edge cropped hoodie and high-waisted drawstring jogger pants.",
+    "material": "80% cotton, 20% polyester fleece",
+    "care": [
+      "Machine wash cold",
+      "Tumble dry low"
+    ],
+    "colors": [
+      {
+        "name": "Yellow",
+        "hex": "#FFD700"
+      }
+    ],
+    "images": [
+      "./images/w40.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w25",
+      "w39"
+    ]
+  },
+  {
+    "id": "w41",
+    "name": "Glossy Plaid Trench Coat",
+    "gender": "women",
+    "category": "Outerwear",
+    "price": 135,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "A stylish, glossy brown plaid trench coat with an oversized cut and statement lapel collar for a chic, weather-resistant statement look.",
+    "material": "60% polyurethane, 40% polyester",
+    "care": [
+      "Wipe clean with a damp cloth",
+      "Hang to dry"
+    ],
+    "colors": [
+      {
+        "name": "Brown Plaid",
+        "hex": "#8B4513"
+      }
+    ],
+    "images": [
+      "./images/w41.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w30",
+      "w34"
+    ]
+  },
+  {
+    "id": "w11",
+    "name": "Tailored Cream Blazer",
+    "gender": "women",
+    "category": "Blazers",
+    "price": 95,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "An elegant structured cream blazer featuring contrasting lapels for a sophisticated statement look.",
+    "material": "70% polyester, 30% rayon",
+    "care": [
+      "Dry clean only"
+    ],
+    "colors": [
+      {
+        "name": "Cream",
+        "hex": "#F5F5DC"
+      }
+    ],
+    "images": [
+      "./images/w11.jpg"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "relatedIds": [
+      "w8"
+    ]
+  },
+  {
     "id": "w1",
     "name": "Essentials Linen Shirt",
     "gender": "women",

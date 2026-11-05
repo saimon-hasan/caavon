@@ -1,32 +1,56 @@
 const express = require('express');
 const path = require('path');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
+const publicPath = path.join(__dirname, '../public');
 
-// Middleware
+// Parse JSON requests.
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '../public')));
 
-// Health check endpoint (for monitoring)
+// Health check.
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', timestamp: new Date().toISOString() });
+  res.json({
+    status: 'ok',
+    timestamp: new Date().toISOString(),
+  });
 });
 
-// Serve index.html for all routes (SPA hash routing)
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/index.html'));
+// Serve public/index.html, styles.css, app.js, and products.json.
+app.use(express.static(publicPath));
+
+// Handle missing files and routes.
+app.use((req, res) => {
+  res.status(404).json({
+    error: 'Not found',
+    path: req.path,
+  });
 });
 
-// Error handling
+// Handle server errors.
 app.use((err, req, res, next) => {
-  console.error('Error:', err);
-  res.status(500).json({ error: 'Internal Server Error' });
+  console.error('Server error:', err);
+
+  if (res.headersSent) {
+    return next(err);
+  }
+
+  res.status(500).json({
+    error: 'Internal Server Error',
+  });
 });
 
-app.listen(PORT, () => {
-  console.log(`✅ CAAVON server running at http://localhost:${PORT}`);
-  console.log(`📁 Serving static files from: ${path.join(__dirname, '../public')}`);
-  console.log(`🏥 Health check: GET /api/health`);
-});
+// Start the server when this file is run directly.
+if (require.main === module) {
+  const server = app.listen(PORT, () => {
+    console.log(`CAAVON running at http://localhost:${PORT}`);
+    console.log(`Serving files from: ${publicPath}`);
+  });
+
+  server.on('error', (err) => {
+    console.error(`Could not start server: ${err.message}`);
+    process.exitCode = 1;
+  });
+}
 
 module.exports = app;
