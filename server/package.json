@@ -2,10 +2,10 @@
   "name": "caavon-fashion-storefront",
   "version": "2.0.0",
   "description": "Professional H&M-inspired fashion e-commerce storefront with modern features",
-  "main": "server/app.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node server/app.js",
-    "dev": "node server/app.js",
+    "start": "node app.js",
+    "dev": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
