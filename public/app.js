@@ -56,7 +56,13 @@
     if (route === 'home' || route.startsWith('shop/')) {
       const gender = route.split('/')[1] || 'all';
       const saleOnly = new URLSearchParams(query).get('sale') === 'true';
-      collection(saleOnly ? 'Sale' : gender === 'women' ? 'Women' : gender === 'men' ? 'Men' : 'Shop all', products.filter(p => (gender === 'all' || p.gender === gender) && (!saleOnly || p.isSale)));
+      const titles = { women: 'Women', men: 'Men', kids: 'Kids', all: 'Shop all' };
+      collection(
+        saleOnly ? 'Sale' : (titles[gender] || 'Shop all'),
+        products.filter(p =>
+          (gender === 'all' || p.gender === gender || (p.gender === 'unisex' && gender !== 'kids')) &&
+          (!saleOnly || p.isSale))
+      );
     } else if (route === 'favorites') {
       collection('Your favorites', products.filter(p => favorites.has(p.id)));
     } else if (route.startsWith('product/')) {
@@ -89,7 +95,7 @@
         <div class="auth-container">
           <div class="auth-content">
             <p class="eyebrow">Welcome back</p>
-            <h1>Si in</h1>
+            <h1>Sign in</h1>
             <p>Sign in to access your CAAVON account.</p>
             <form id="login-form">
               <div class="form-group">
@@ -124,9 +130,16 @@
     render();
   });
   main.addEventListener('submit', event => {
-    if (event.target.id !== 'add-to-bag') return;
-    event.preventDefault();
     const form = event.target;
+    // Sign-in is a demo: stop the browser from submitting (and putting the password in the URL).
+    if (form.id === 'login-form') {
+      event.preventDefault();
+      const message = document.getElementById('login-message');
+      if (message) message.textContent = 'Sign-in is not available yet. Nothing was sent or saved.';
+      return;
+    }
+    if (form.id !== 'add-to-bag') return;
+    event.preventDefault();
     const values = new FormData(form);
     const item = { id: form.dataset.id, size: values.get('size'), color: values.get('color'), quantity: 1 };
     const existing = bag.find(row => row.id === item.id && row.size === item.size && row.color === item.color);
@@ -137,7 +150,7 @@
   async function init() {
     main.innerHTML = '<p role="status">Loading products…</p>';
     try {
-      const response = await fetch('/products.json');
+      const response = await fetch('products.json');
       if (!response.ok) throw new Error(`products.json returned HTTP ${response.status}`);
       const data = await response.json();
       if (!Array.isArray(data)) throw new Error('products.json must contain an array of products.');
