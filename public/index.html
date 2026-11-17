@@ -31,6 +31,28 @@
 .kids-banner h2{font:40px var(--serif);margin:18px 0}
 .kids-banner p{font-size:13px;color:var(--muted);margin-bottom:25px}
 @media(max-width:760px){.kids-category-grid{grid-template-columns:1fr;gap:12px}.kids-category-tile{min-height:150px}.kids-category-nav{gap:8px}.kids-category-nav a{padding:10px 12px}.kids-section-heading{margin-top:45px}.kids-banner h2{font-size:32px}}
+
+/* Kids shop: match the New Arrivals editorial product grid */
+#main .kids-shop-collection{max-width:1440px;margin:0 auto}
+#main .kids-shop-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:28px}
+#main .kids-shop-heading h1{font:42px var(--serif);font-weight:400;margin:0}
+#main .kids-shop-heading>a{font-size:11px;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:5px}
+#main .kids-shop-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 22px}
+#main .kids-shop-card{min-width:0}
+#main .kids-shop-photo{position:relative;overflow:hidden;border-radius:4px;background:#efefeb}
+#main .kids-shop-photo>a{display:block}
+#main .kids-shop-photo img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;transition:transform .3s ease}
+#main .kids-shop-photo:hover img{transform:scale(1.025)}
+#main .kids-shop-heart{position:absolute;right:12px;top:10px;display:grid;place-items:center;width:38px;height:38px;min-height:0;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.92);font-size:27px;line-height:1;cursor:pointer}
+#main .kids-shop-heart[aria-pressed="true"]{color:#a43b35}
+#main .kids-shop-label{position:absolute;bottom:12px;left:12px;background:#fff;padding:7px 10px;font-size:9px;letter-spacing:.08em}
+#main .kids-shop-details{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:17px}
+#main .kids-shop-details h3{font:13px var(--serif);font-weight:400;margin:0}
+#main .kids-shop-price{font-size:12px;white-space:nowrap}
+#main .kids-shop-price del{color:var(--muted);margin-left:4px}
+#main .kids-shop-options{display:inline-block;margin-top:12px;font-size:11px;border-bottom:1px solid currentColor;padding-bottom:3px}
+@media(max-width:900px){#main .kids-shop-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){#main .kids-shop-grid{gap:22px 12px}#main .kids-shop-details{display:block}#main .kids-shop-price{margin-top:6px}#main .kids-shop-heading h1{font-size:34px}}
 </style>
 </head>
 <body>
