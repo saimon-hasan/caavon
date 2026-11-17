@@ -1925,5 +1925,365 @@
       "k1",
       "k2"
     ]
+  },
+  {
+    "id": "k5",
+    "name": "Kids Classic Zip Hoodie",
+    "gender": "kids",
+    "category": "Hoodies",
+    "price": 38,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "Sample Kids collection listing: kids classic zip hoodie. Product details and photography should be confirmed before sale.",
+    "material": "100% organic cotton",
+    "care": [
+      "Machine wash cold",
+      "Tumble dry low"
+    ],
+    "colors": [
+      {
+        "name": "Cream",
+        "hex": "#fffef8"
+      },
+      {
+        "name": "Navy",
+        "hex": "#1e3a4c"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=900&q=85"
+    ],
+    "sizes": [
+      "2T",
+      "3T",
+      "4T",
+      "5",
+      "6",
+      "7",
+      "8",
+      "10",
+      "12"
+    ],
+    "relatedIds": [
+      "k1",
+      "k2",
+      "k3"
+    ]
+  },
+  {
+    "id": "k6",
+    "name": "Kids Relaxed Jogger Pants",
+    "gender": "kids",
+    "category": "Pants",
+    "price": 27,
+    "originalPrice": null,
+    "isNew": false,
+    "isSale": false,
+    "description": "Sample Kids collection listing: kids relaxed jogger pants. Product details and photography should be confirmed before sale.",
+    "material": "98% cotton, 2% elastane",
+    "care": [
+      "Machine wash cold",
+      "Tumble dry low"
+    ],
+    "colors": [
+      {
+        "name": "Cream",
+        "hex": "#fffef8"
+      },
+      {
+        "name": "Navy",
+        "hex": "#1e3a4c"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=900&q=85"
+    ],
+    "sizes": [
+      "2T",
+      "3T",
+      "4T",
+      "5",
+      "6",
+      "7",
+      "8",
+      "10",
+      "12"
+    ],
+    "relatedIds": [
+      "k1",
+      "k2",
+      "k3"
+    ]
+  },
+  {
+    "id": "k7",
+    "name": "Kids Graphic Everyday Tee",
+    "gender": "kids",
+    "category": "T-shirts",
+    "price": 22,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "Sample Kids collection listing: kids graphic everyday tee. Product details and photography should be confirmed before sale.",
+    "material": "100% organic cotton",
+    "care": [
+      "Machine wash cold",
+      "Tumble dry low"
+    ],
+    "colors": [
+      {
+        "name": "Cream",
+        "hex": "#fffef8"
+      },
+      {
+        "name": "Navy",
+        "hex": "#1e3a4c"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=900&q=85"
+    ],
+    "sizes": [
+      "2T",
+      "3T",
+      "4T",
+      "5",
+      "6",
+      "7",
+      "8",
+      "10",
+      "12"
+    ],
+    "relatedIds": [
+      "k1",
+      "k2",
+      "k3"
+    ]
+  },
+  {
+    "id": "k8",
+    "name": "Kids Soft Fleece Jacket",
+    "gender": "kids",
+    "category": "Jackets",
+    "price": 44,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "Sample Kids collection listing: kids soft fleece jacket. Product details and photography should be confirmed before sale.",
+    "material": "80% cotton, 20% polyester",
+    "care": [
+      "Machine wash cold",
+      "Tumble dry low"
+    ],
+    "colors": [
+      {
+        "name": "Cream",
+        "hex": "#fffef8"
+      },
+      {
+        "name": "Navy",
+        "hex": "#1e3a4c"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=900&q=85"
+    ],
+    "sizes": [
+      "2T",
+      "3T",
+      "4T",
+      "5",
+      "6",
+      "7",
+      "8",
+      "10",
+      "12"
+    ],
+    "relatedIds": [
+      "k1",
+      "k2",
+      "k3"
+    ]
+  },
+  {
+    "id": "k9",
+    "name": "Kids Playtime Denim Shorts",
+    "gender": "kids",
+    "category": "Shorts",
+    "price": 25,
+    "originalPrice": null,
+    "isNew": false,
+    "isSale": false,
+    "description": "Sample Kids collection listing: kids playtime denim shorts. Product details and photography should be confirmed before sale.",
+    "material": "98% cotton, 2% elastane",
+    "care": [
+      "Machine wash cold",
+      "Tumble dry low"
+    ],
+    "colors": [
+      {
+        "name": "Cream",
+        "hex": "#fffef8"
+      },
+      {
+        "name": "Navy",
+        "hex": "#1e3a4c"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=900&q=85"
+    ],
+    "sizes": [
+      "2T",
+      "3T",
+      "4T",
+      "5",
+      "6",
+      "7",
+      "8",
+      "10",
+      "12"
+    ],
+    "relatedIds": [
+      "k1",
+      "k2",
+      "k3"
+    ]
+  },
+  {
+    "id": "k10",
+    "name": "Kids Colorblock Sweatshirt",
+    "gender": "kids",
+    "category": "Knitwear",
+    "price": 33,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "Sample Kids collection listing: kids colorblock sweatshirt. Product details and photography should be confirmed before sale.",
+    "material": "80% cotton, 20% polyester",
+    "care": [
+      "Machine wash cold",
+      "Tumble dry low"
+    ],
+    "colors": [
+      {
+        "name": "Cream",
+        "hex": "#fffef8"
+      },
+      {
+        "name": "Navy",
+        "hex": "#1e3a4c"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=900&q=85"
+    ],
+    "sizes": [
+      "2T",
+      "3T",
+      "4T",
+      "5",
+      "6",
+      "7",
+      "8",
+      "10",
+      "12"
+    ],
+    "relatedIds": [
+      "k1",
+      "k2",
+      "k3"
+    ]
+  },
+  {
+    "id": "k11",
+    "name": "Kids Lightweight Pullover",
+    "gender": "kids",
+    "category": "Knitwear",
+    "price": 31,
+    "originalPrice": null,
+    "isNew": false,
+    "isSale": false,
+    "description": "Sample Kids collection listing: kids lightweight pullover. Product details and photography should be confirmed before sale.",
+    "material": "80% cotton, 20% polyester",
+    "care": [
+      "Machine wash cold",
+      "Tumble dry low"
+    ],
+    "colors": [
+      {
+        "name": "Cream",
+        "hex": "#fffef8"
+      },
+      {
+        "name": "Navy",
+        "hex": "#1e3a4c"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=900&q=85"
+    ],
+    "sizes": [
+      "2T",
+      "3T",
+      "4T",
+      "5",
+      "6",
+      "7",
+      "8",
+      "10",
+      "12"
+    ],
+    "relatedIds": [
+      "k1",
+      "k2",
+      "k3"
+    ]
+  },
+  {
+    "id": "k12",
+    "name": "Kids Weekend Cotton Shorts",
+    "gender": "kids",
+    "category": "Shorts",
+    "price": 24,
+    "originalPrice": null,
+    "isNew": true,
+    "isSale": false,
+    "description": "Sample Kids collection listing: kids weekend cotton shorts. Product details and photography should be confirmed before sale.",
+    "material": "80% cotton, 20% polyester",
+    "care": [
+      "Machine wash cold",
+      "Tumble dry low"
+    ],
+    "colors": [
+      {
+        "name": "Cream",
+        "hex": "#fffef8"
+      },
+      {
+        "name": "Navy",
+        "hex": "#1e3a4c"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=900&q=85"
+    ],
+    "sizes": [
+      "2T",
+      "3T",
+      "4T",
+      "5",
+      "6",
+      "7",
+      "8",
+      "10",
+      "12"
+    ],
+    "relatedIds": [
+      "k1",
+      "k2",
+      "k3"
+    ]
   }
 ]
