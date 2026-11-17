@@ -178,7 +178,7 @@
   async function init() {
     main.innerHTML = '<p role="status">Loading products…</p>';
     try {
-      const response = await fetch('products.json');
+      const response = await fetch('products.json?v=kids12-20261117', { cache: 'no-store' });
       if (!response.ok) throw new Error(`products.json returned HTTP ${response.status}`);
       const data = await response.json();
       if (!Array.isArray(data)) throw new Error('products.json must contain an array of products.');
