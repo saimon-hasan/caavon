@@ -178,9 +178,16 @@
   async function init() {
     main.innerHTML = '<p role="status">Loading products…</p>';
     try {
-      const response = await fetch('products.json?v=kids12-20261117', { cache: 'no-store' });
-      if (!response.ok) throw new Error(`products.json returned HTTP ${response.status}`);
-      const data = await response.json();
+      // Use the catalog shipped with this page so the Kids collection cannot
+      // accidentally load a stale products.json from a different deployment.
+      const embeddedCatalog = document.getElementById('homepage-products');
+      const data = embeddedCatalog
+        ? JSON.parse(embeddedCatalog.textContent)
+        : await (async () => {
+            const response = await fetch('products.json', { cache: 'no-store' });
+            if (!response.ok) throw new Error(`products.json returned HTTP ${response.status}`);
+            return response.json();
+          })();
       if (!Array.isArray(data)) throw new Error('products.json must contain an array of products.');
       const ids = new Set();
       for (const product of data) {
