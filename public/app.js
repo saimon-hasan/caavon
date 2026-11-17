@@ -47,6 +47,30 @@
       <a href="#product/${encodeURIComponent(product.id)}">Choose options</a>
     </article>`;
   }
+  function kidsCard(product) {
+    const id = escape(product.id);
+    const saved = favorites.has(product.id);
+    return `<article class="kids-shop-card">
+      <div class="kids-shop-photo">
+        <a href="#product/${encodeURIComponent(product.id)}" aria-label="View ${escape(product.name)}">
+          <img src="${imageUrl(product.images[0])}" alt="${escape(product.name)}" loading="lazy" width="600" height="780">
+        </a>
+        <button type="button" class="kids-shop-heart" data-action="favorite" data-id="${id}" aria-label="${saved ? 'Remove from' : 'Add to'} favorites" aria-pressed="${saved}">${saved ? '♥' : '♡'}</button>
+        ${product.isNew ? '<span class="kids-shop-label">NEW ARRIVAL</span>' : ''}
+      </div>
+      <div class="kids-shop-details">
+        <h3><a href="#product/${encodeURIComponent(product.id)}">${escape(product.name)}</a></h3>
+        <div class="kids-shop-price">${money(product.price)}${product.isSale && product.originalPrice > product.price ? ` <del>${money(product.originalPrice)}</del>` : ''}</div>
+      </div>
+      <a class="kids-shop-options" href="#product/${encodeURIComponent(product.id)}">Choose options</a>
+    </article>`;
+  }
+  function kidsCollection(items) {
+    main.innerHTML = `<section class="kids-shop-collection">
+      <div class="kids-shop-heading"><h1>Kids</h1><a href="#home" data-scroll="kids-collection">Explore the edit ↗</a></div>
+      <div class="kids-shop-grid">${items.length ? items.map(kidsCard).join('') : '<p>No products here yet.</p>'}</div>
+    </section>`;
+  }
   function collection(title, items) {
     main.innerHTML = `<section><h1>${escape(title)}</h1><div class="product-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px">${items.length ? items.map(card).join('') : '<p>No products here yet.</p>'}</div></section>`;
   }
@@ -57,6 +81,10 @@
       const gender = route.split('/')[1] || 'all';
       const saleOnly = new URLSearchParams(query).get('sale') === 'true';
       const titles = { women: 'Women', men: 'Men', kids: 'Kids', all: 'Shop all' };
+      if (gender === 'kids' && !saleOnly) {
+        kidsCollection(products.filter(p => p.gender === 'kids'));
+        return;
+      }
       collection(
         saleOnly ? 'Sale' : (titles[gender] || 'Shop all'),
         products.filter(p =>
